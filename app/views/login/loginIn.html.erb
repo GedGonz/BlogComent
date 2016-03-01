@@ -1,18 +1,11 @@
 <div class="header">
-  <nav class="navmenu text-center">
-
-	    <%=link_to 'Incio', controller:'welcome', action:'index'%>
-	    <%=link_to 'Login', controller:'login', action:'loginIn'%>
-	    <%=link_to 'About', controller:'welcome', action:'index'%>
-	    <%=link_to 'Contacto', controller:'welcome', action:'index'%>
-
-  </nav>
+ <%= render 'menu' %>
 </div>
 <div class="container">
 <br>
 <br>
 <br>
-	<div class="/row">
+	<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
 		<div class="card-panel text-center bl-panel hoverable wow bounceInUp">

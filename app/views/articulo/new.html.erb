@@ -1,12 +1,7 @@
 <div class="header">
-  <nav class="navmenu text-center">
-  
-	  	<%=link_to 'Incio', controller:'articulo', action:'index'%>
-	  	<%=link_to 'Logout', controller:'articulo', action:'logout'%>
-	  	<%=link_to 'Crear', controller:'articulo', action:'new'%>
-	  	<%=link_to 'Articulos', controller:'articulo', action:'list'%>
-	    
-  </nav>
+  <div class="text-center">
+	  	<%= render 'menu' %>
+	  </div>
 </div>
 
 

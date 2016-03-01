@@ -1,12 +1,9 @@
 <div class="header">
-  <nav class="navmenu text-center">
+  <div class="text-center">
   
-	    <%=link_to 'Incio', controller:'welcome', action:'index'%>
-	    <%=link_to 'Login', controller:'login', action:'loginIn'%>
-	    <%=link_to 'About', controller:'welcome', action:'index'%>
-	    <%=link_to 'Contacto', controller:'welcome', action:'index'%>
+	   <%= render 'menu' %>
 	    
-  </nav>
+  </div>
 </div>
 <div class="container">
 <br>

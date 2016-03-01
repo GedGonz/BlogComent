@@ -1,0 +1,13 @@
+
+<%= form_for(:datacoment,:url => {:action => :creat}, multipart: true) do |f| %>
+	<div class="form-group">
+		<%=f.text_field(:nick,class:"form-control",placeholder:'Name')%>
+		<%=f.text_area(:descripcion,class:"materialize-textarea",placeholder:"Comentario")%>
+	</div>
+	<div class="form-group ">
+	<button class="btn btn-primary btn-sm">
+		Enviar <i class="material-icons">check_circle</i> 
+	</button>
+	</div>
+
+<%end%>

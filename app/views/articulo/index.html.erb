@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="col-md-12 text-center">
 	 <p class="textoeslogan2 " >
-        Bienvenido <span><%=@usuario.nombre+" "+@usuario.apellido%></span>
+        Bienvenido <span class="titleLogin2"><%=@usuario.nombre+" "+@usuario.apellido%></span>
         </p>
 	  <a href="/">
 		<%= image_tag "Logo2.png", :alt => "TejidoDigital", :title => "TejidoDigital",class:"wow slideInLeft tamanioImag saltos"%>
@@ -15,11 +15,6 @@
         </p>
 		      
 
-	  <nav class="navmenu">
-	  	<%=link_to 'Incio', controller:'articulo', action:'index'%>
-	  	<%=link_to 'Logout', controller:'articulo', action:'logout'%>
-	  	<%=link_to 'Crear', controller:'articulo', action:'new'%>
-	  	<%=link_to 'Articulos', controller:'articulo', action:'list'%>
-	  </nav>
+	  <%= render 'menu' %>
 	</div>
 </div>

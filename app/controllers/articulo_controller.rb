@@ -1,7 +1,7 @@
 class ArticuloController < ApplicationController
   def index
   	if existUser
-
+  		
   	else
   		redirect_to :controller=> :login, :action=>:loginIn
   	end
@@ -39,7 +39,8 @@ class ArticuloController < ApplicationController
 
   def list
   	if existUser
-
+  		@idUsuario=session[:IdUsers].to_s
+  		@articulos=Articulo.where(usuario_id:@idUsuario)
   	else
   		redirect_to :controller=> :login, :action=>:loginIn
   	end
