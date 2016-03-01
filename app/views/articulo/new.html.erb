@@ -1,0 +1,52 @@
+<div class="header">
+  <nav class="navmenu text-center">
+  
+	  	<%=link_to 'Incio', controller:'articulo', action:'index'%>
+	  	<%=link_to 'Logout', controller:'articulo', action:'logout'%>
+	  	<%=link_to 'Crear', controller:'articulo', action:'new'%>
+	  	<%=link_to 'Articulos', controller:'articulo', action:'list'%>
+	    
+  </nav>
+</div>
+
+
+<div class="container">
+<br>
+<br>
+<br>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+		<div class="card-panel text-center bl-panel hoverable wow bounceInUp">
+		<h2 class="titleLogin1 padingall wow fadeInUp">NEW-<span class="titleLogin2">ARTICULO</span></h2>
+		<div class="bordertitle"></div>
+		<br>
+
+			<%=form_for(:articulo,:url=>{:action=>:creat}, multi_part:true) do |f|%>
+				
+				   <div class="form-group">
+	 	              <%=f.text_field(:titulo,class:"form-control",placeholder:"Titulo")%>
+	 	              <%=f.text_area(:descripcion,class:"materialize-textarea",placeholder:"Descripcion")%>
+	 	              <%=f.text_field(:autor,class:"form-control",placeholder:"Autor")%>
+					  <br>
+	 	              <%=f.label("Fecha")%>
+	 	              <%=f.text_field(:fecha,class:"datepicker picker__input",type:"date")%>
+
+	               </div>
+				<br>
+				<br>
+				<div class="form-group">
+				<button class="btn btn-primary btn-sm btn-block">
+					Save 
+				</button>
+				<a href="/articulo/index" class="btn btn-danger btn-sm btn-block">
+					Cancel
+				</a>
+				</div>
+            
+			<%end%>
+		</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>

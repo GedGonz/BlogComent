@@ -1,0 +1,65 @@
+/*// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+.tamanioImag
+{
+	max-width: 100%;
+
+}
+.saltos
+{
+	padding-top: 10em;
+}
+
+.textoeslogan1
+{
+	font-family: 'Orbitron', sans-serif;
+	color: #076A92;
+	font-size: 1.3em;
+}
+.textoeslogan2
+{
+	font-family: 'Orbitron', sans-serif;
+	font-style: bold;
+	color: #000000;
+	font-size:  1.3em;
+}
+
+.textoeslogan3
+{
+	font-family:'Trebuchet MS',cursive;
+	color: #076A92;
+	font-size: 1.1em;
+
+
+}
+.bordertitle
+{
+		border-bottom: 1px solid #eee;
+}
+.titleLogin1
+{
+	font-family: 'Orbitron', sans-serif;
+	/*font-family: 'Black Ops One', cursive;*/
+	font-size: 1.3em;
+	font-weight:  800;
+
+}
+.titleLogin2
+{
+color: #076A92;
+
+}
+.navmenu > a
+{
+	font-family: 'Orbitron', sans-serif;
+	font-weight:  600;
+	padding-left: 1em;
+}
+.header
+{
+	height: 2em;
+	background: #F2F2F2;
+	box-shadow: 0 0 5px 0;
+}

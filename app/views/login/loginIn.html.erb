@@ -1,0 +1,48 @@
+<div class="header">
+  <nav class="navmenu text-center">
+
+	    <%=link_to 'Incio', controller:'welcome', action:'index'%>
+	    <%=link_to 'Login', controller:'login', action:'loginIn'%>
+	    <%=link_to 'About', controller:'welcome', action:'index'%>
+	    <%=link_to 'Contacto', controller:'welcome', action:'index'%>
+
+  </nav>
+</div>
+<div class="container">
+<br>
+<br>
+<br>
+	<div class="/row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+		<div class="card-panel text-center bl-panel hoverable wow bounceInUp">
+		<h2 class="titleLogin1 padingall wow fadeInUp">TEJIDO-<span class="titleLogin2">DIGITAL</span></h2>
+		<div class="bordertitle"></div>
+		<br>
+
+			<%= form_for(:logins,:url => {:action => :access}, multipart: true) do |f| %>
+				
+				<div class="form-group">
+
+					<%=f.text_field(:username,class:"form-control",placeholder:'Usuario')%>
+					<%=f.password_field(:password,class:"form-control",placeholder:'Password')%>
+
+				</div>
+				<br>
+				<br>
+				<div class="form-group ">
+				<button class="btn btn-primary btn-lg btn-block btn-sm">
+					Aceptar <i class="material-icons">check_circle</i> 
+				</button>
+				<br>
+				<div class="text-left">
+					<%=link_to 'Register', controller:'login', action:'new'%>
+					</div>
+				</div>
+
+			<%end%>
+		</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>

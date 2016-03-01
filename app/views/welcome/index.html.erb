@@ -1,0 +1,20 @@
+<div class="header"></div>
+<div class="container">
+	<div class="col-md-12 text-center">
+	  <a href="/">
+		<%= image_tag "Logo2.png", :alt => "TejidoDigital", :title => "TejidoDigital",class:"wow slideInLeft tamanioImag saltos"%>
+	  </a>
+	  <p class="textoeslogan1 padingall wow fadeIn" data-wow-delay="0.5s">
+	   Inovacion y Desarrollo en tus Manos
+	   </p>
+       <p class="textoeslogan2 wow bounceInDown" data-wow-delay="0.6s">
+        Somos una Empresa de Solucion a sus Necesidades
+        </p>
+	  <nav class="navmenu">
+	  	<%=link_to 'Incio', controller:'login', action:'index'%>
+	  	<%=link_to 'Login', controller:'login', action:'loginIn'%>
+	  	<%=link_to 'About', controller:'welcome', action:'index'%>
+	  	<%=link_to 'Contacto', controller:'welcome', action:'index'%>
+	  </nav>
+	</div>
+</div>
