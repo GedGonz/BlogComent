@@ -11,7 +11,7 @@
 <% @articulos.each do |art|%> 
 	<div class="panel panel-default">
 		<div class="panel-heading ">
-			<h10 class="textoeslogan1"><a href="/articulo/public"><%=art.titulo%></a></h10>
+			<h10 class="textoeslogan1"><a href="/articulo/<%=art.id%>"><%=art.titulo%></a></h10>
 		</div>
 		<div class="panel-body">
 		<span class="textListitle">Autor: </span> <%=art.autor%><br>

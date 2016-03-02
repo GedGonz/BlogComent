@@ -72,4 +72,20 @@ class ArticuloController < ApplicationController
   def paramregist
       params.require(:articulo).permit(:titulo, :descripcion, :autor,:fecha)
   end
+
+  def paramartic
+      params.require(:articulo).permit(:id)
+  end
+
+  def public
+  	if existUser
+  	   @idArticulo=params[:id]
+       session[:idarticulo]=@idArticulo
+  	   @articulos=Articulo.where(id:@idArticulo)
+       @coment=Comentario.where(articulo_id:@idArticulo)
+  	else
+  		redirect_to :controller=> :login, :action=>:loginIn
+  	end
+  	
+  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229215726) do
+ActiveRecord::Schema.define(version: 20160301191336) do
 
   create_table "articulos", force: true do |t|
     t.string  "titulo"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20160229215726) do
   end
 
   add_index "articulos", ["usuario_id"], name: "index_articulos_on_usuario_id", using: :btree
+
+  create_table "comentarios", force: true do |t|
+    t.string  "nombre"
+    t.string  "comentario"
+    t.date    "fecha"
+    t.integer "padre"
+    t.integer "tipo"
+    t.integer "articulo_id"
+  end
+
+  add_index "comentarios", ["articulo_id"], name: "index_comentarios_on_articulo_id", using: :btree
 
   create_table "usuarios", force: true do |t|
     t.string "username"

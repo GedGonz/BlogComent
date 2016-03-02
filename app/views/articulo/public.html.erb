@@ -3,35 +3,91 @@
 	  	<%= render 'menu' %>
 	  </div>
 </div>
+<script>
+var click=false;
+$(document).ready(function(){
+	
+	$('.formComent').hide();
+	$('.padre').hide();
+	$('.tipo').hide();
+
+});
+	function imprimir(que)
+  {
+	
+  //	var id=document.getElementById(que).value;
+		
+			if(click==false)
+			{
+	    	$('#formComent'+que).show();
+	    	$('#padre'+que).val("0");
+	    	$('#tipo'+que).val("0");
+	    	click=true
+			}
+			else
+			{
+				click=false;
+				$('#formComent'+que).hide();
+			}
+
+
+	}
+</script>
 <div class="container">
+<%@articulos.each do |arti| %>
 <div class="row">
-		<h2 class="titleLogin1 padingall wow fadeInUp">ARTICULO-<span class="titleLogin2">RUBY ON RAILS</span></h2>
+
+		<h2 class="titleLogin1 padingall wow fadeInUp">ARTICULO-<span class="titleLogin2"><%=arti.titulo%></span></h2>
 </div>
 
 
 	<div class="panel panel-default">
 		<div class="panel-heading ">
-			<h10 class="textoeslogan1"><a href="/articulo/public">RUBY ON RAILS</a></h10>
+			<h10 class="textoeslogan1"><%=arti.titulo%></h10>
 		</div>
 		<div class="panel-body">
-		<span class="textListitle">Autor: </span> Ged<br>
-		<span class="textListitle">Descripcion: </span>Nada<br>
-		<span class="textListitle">Publicacion: </span>2016-02-01
+		<span class="textListitle">Autor: </span> <%=arti.autor%><br>
+		<span class="textListitle">Descripciòn: </span><%=arti.descripcion%><br>
+		<span class="textListitle">Publicaciòn: </span><%=arti.fecha%>
 		</div>
+		<div class="form-group">
+			<button id="0" type="submit" onClick="imprimir(0);" class="btn btn-primary btn-sm"><i class="material-icons">speaker_notes</i></button>
+		</div>
+		<hr>
+			<% @i=0;%>
+				<!--Formulario-->
+			<%=render "comentario/formcoment" %>
+		<!--Comentarios-->
+		<div class="row">
+			<div class="col-md-12">
 		
-	</div>
-<div class="row">
-		<div class="col-md-4">
-			<div class="panel panel-default">
-				<div class="panel-body">
-				<%=render "comentario/formcoment" %>
-				</div>
+				<%@coment.each do |com| %>
+
+					<%@i=@i+1%>
+
+					<div class="panel-body">
+						<div>
+						<%= image_tag "iconcoment3.png", :alt => "usuario", :title => "usuario",class:"Imagcoment"%>
+						
+						<h10 class="textoeslogan1"><%=com.nombre%></h10>
+									<button id="<%=@i%>" type="submit" onClick="imprimir(<%=@i%>);" class="btn btn-primary btn-sm"><i class="material-icons">speaker_notes</i></button>
+						<br>
+						</div>
+						<span ><%=com.comentario%> </span> <br>
+						<span ><%=com.fecha%> </span>
+						<%=render "comentario/formcoment" %>
+					</div>
+				
+				<%end%>
+				
 			</div>
+			<div class="col-md-3"></div>
+			<div class="col-md-3"></div>
 		</div>
-		
-		<div class="col-md-4">
-			
-		</div>
-		<div class="col-md-4"></div>
-</div>
+
+	</div>
+
+<%end%>
+
+
 </div>

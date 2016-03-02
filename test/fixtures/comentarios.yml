@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  comentario: MyString
+  fecha: 2016-03-01
+  padre: 1
+  tipo: 1
+  articulo_id: 
+
+two:
+  nombre: MyString
+  comentario: MyString
+  fecha: 2016-03-01
+  padre: 1
+  tipo: 1
+  articulo_id: 

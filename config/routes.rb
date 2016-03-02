@@ -2,13 +2,21 @@ Rails.application.routes.draw do
 
   get 'comentario/index'
 
+  post 'comentario/creat'=>'comentario#creat' 
+
   get 'articulo/index'
 
   get 'articulo/list'
 
   get 'articulo/logout'
 
+  get 'articulo/new'
+
+  post 'articulo/creat'=>'articulo#creat' 
+
   get 'articulo/public'
+
+  get 'articulo/:id' => 'articulo#public'
 
   get 'welcome/index'
 
@@ -24,12 +32,6 @@ Rails.application.routes.draw do
   post 'login/access'=>'login#access' 
   
 
-  get 'articulo/new'
-
-  post 'articulo/creat'=>'articulo#creat' 
-
-
-  post 'comentario/creat'=>'comentario#creat' 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
