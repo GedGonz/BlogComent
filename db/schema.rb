@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301191336) do
+ActiveRecord::Schema.define(version: 20160304214916) do
 
   create_table "articulos", force: true do |t|
     t.string  "titulo"
     t.string  "descripcion"
     t.string  "autor"
     t.date    "fecha"
+    t.string  "image"
     t.integer "usuario_id"
   end
 

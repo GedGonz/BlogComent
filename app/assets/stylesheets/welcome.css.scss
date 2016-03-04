@@ -2,10 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 */
+
 .tamanioImag
 {
 	max-width: 100%;
+}
+.contenImage
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
 
+}
+.ImageUpload
+{
+	max-width: 35%;
+}
+
+.tamanioImag2
+{
+	max-width: 5%;
 }
 .Imagcoment
 {
@@ -79,4 +94,28 @@ color: #076A92;
 	font-family: 'Orbitron', sans-serif;
 	color: #000000;
 	font-size: 0.8em;
+}
+
+
+.mdl-button--file {
+  input {
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
+  }
+}
+
+.mdl-textfield--file {
+  .mdl-textfield__input {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+  }
+  .mdl-button--file {
+    right: 0;
+  }
 }

@@ -8,13 +8,13 @@
 								<%if session[:IdUsers]%>
 									
 									<%=f.text_area(:descripcion,class:"materialize-textarea",placeholder:"Comentario")%>
-									<%=f.text_field(:padre,id:"padre"+@i.to_s, class:"padre" )%>
-									<%=f.text_field(:tipo,id:"tipo"+@i.to_s, class:"tipo")%>
+									<%=f.text_field(:padre,id:"padre"+@i.to_s, class:"padre",value:""+@i.to_s )%>
+									<%=f.text_field(:tipo,id:"tipo"+@i.to_s, class:"tipo",value:"0")%>
 								<%else%>
 								    <%=f.text_field(:nick,class:"form-control",placeholder:'Name')%>
 								    <%=f.text_area(:descripcion,class:"materialize-textarea",placeholder:"Comentario")%>
-									<%=f.text_field(:padre,id:"padre"+@i.to_s, class:"padre" )%>
-									<%=f.text_field(:tipo,id:"tipo"+@i.to_s, class:"tipo")%>
+									<%=f.text_field(:padre,id:"padre"+@i.to_s, class:"padre",value:""+@i.to_s)%>
+									<%=f.text_field(:tipo,id:"tipo"+@i.to_s, class:"tipo",value:"1")%>
 								<%end%>
 								</div>
 								<div class="form-group ">

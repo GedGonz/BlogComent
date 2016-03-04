@@ -27,9 +27,19 @@ class ComentarioController < ApplicationController
    end
 
 	def Listall
+
 		@idArticulo=params[:id]
 		@coment=Comentario.where(articulo_id:@idArticulo)
+		@subcomentarios=subcoment(@coment.id)
+		
 	end
+
+	def subcoment(idcomentario)
+		@idArticulo=params[:id]
+		@subcoment=Comentario.where(articulo_id:@idArticulo,padre:idcomentario)
+		return @subcoment
+	end
+  private
   def paramsdata
   	params.require(:datacoment).permit(:nick,:descripcion,:padre,:tipo)
   end

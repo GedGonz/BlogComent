@@ -4,12 +4,14 @@ one:
   titulo: MyString
   descripcion: MyString
   autor: MyString
-  fecha: 2016-02-29
+  fecha: 2016-03-04
+  image: MyString
   usuario_id: 
 
 two:
   titulo: MyString
   descripcion: MyString
   autor: MyString
-  fecha: 2016-02-29
+  fecha: 2016-03-04
+  image: MyString
   usuario_id: 

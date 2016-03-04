@@ -5,6 +5,7 @@ class CreateArticulos < ActiveRecord::Migration
       t.string :descripcion
       t.string :autor
       t.date :fecha
+      t.string :image
       t.references :usuario, index: true
     end
   end

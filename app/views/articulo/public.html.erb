@@ -20,8 +20,8 @@ $(document).ready(function(){
 			if(click==false)
 			{
 	    	$('#formComent'+que).show();
-	    	$('#padre'+que).val("0");
-	    	$('#tipo'+que).val("0");
+	    	//$('#padre'+que).val("1");
+	   
 	    	click=true
 			}
 			else
@@ -60,25 +60,9 @@ $(document).ready(function(){
 		<!--Comentarios-->
 		<div class="row">
 			<div class="col-md-12">
-		
-				<%@coment.each do |com| %>
-
-					<%@i=@i+1%>
-
-					<div class="panel-body">
-						<div>
-						<%= image_tag "iconcoment3.png", :alt => "usuario", :title => "usuario",class:"Imagcoment"%>
-						
-						<h10 class="textoeslogan1"><%=com.nombre%></h10>
-									<button id="<%=@i%>" type="submit" onClick="imprimir(<%=@i%>);" class="btn btn-primary btn-sm"><i class="material-icons">speaker_notes</i></button>
-						<br>
-						</div>
-						<span ><%=com.comentario%> </span> <br>
-						<span ><%=com.fecha%> </span>
-						<%=render "comentario/formcoment" %>
-					</div>
-				
-				<%end%>
+		     <h10 class="textoeslogan1">Cometarios</h10>
+		     <hr>
+				<%=render "comentario/coment" %>
 				
 			</div>
 			<div class="col-md-3"></div>

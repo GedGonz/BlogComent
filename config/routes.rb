@@ -22,6 +22,11 @@ Rails.application.routes.draw do
 
   get 'login/index'
 
+  get 'welcome/articulos'
+
+  get 'welcome/about'
+
+  get 'welcome/contacto'
 
   get 'login/new'
   

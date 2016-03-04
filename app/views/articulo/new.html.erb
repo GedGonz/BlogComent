@@ -1,3 +1,45 @@
+<script type="text/javascript">
+var nval=false;
+$(document).ready(function(){
+$('.contenImage').hide();
+
+});
+/*Hace una Previsualizacion de la imagen antes de cargarla*/
+	function mostrar()
+	{
+		var input = document.getElementById("uploadBtn");
+		var fReader = new FileReader();
+
+		    if(nval==false)
+			{
+			
+			$('.contenImage').show();
+			$('#btnprev').val("Ocultar")
+			fReader.readAsDataURL(input.files[0]);
+			fReader.onloadend = function(event){
+			var img = document.getElementById("matrix");
+			img.src = event.target.result;
+			nval=true;
+			}
+		    }
+			else
+			{
+				$('.contenImage').hide();
+				$('#btnprev').val("Preview")
+				nval=false
+			}
+
+			
+			
+		
+
+	  // alert($('input[type=file]').val());
+      // document.getElementById('matrix').src = $('input[type=file]').val();
+		
+		return false
+
+}
+</script>
 <div class="header">
   <div class="text-center">
 	  	<%= render 'menu' %>
@@ -10,22 +52,30 @@
 <br>
 <br>
 	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-		<div class="card-panel text-center bl-panel hoverable wow bounceInUp">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+		<div class="card-panel  bl-panel hoverable wow bounceInUp">
 		<h2 class="titleLogin1 padingall wow fadeInUp">NEW-<span class="titleLogin2">ARTICULO</span></h2>
 		<div class="bordertitle"></div>
 		<br>
 
-			<%=form_for(:articulo,:url=>{:action=>:creat}, multi_part:true) do |f|%>
+			<%=form_for(:articulod,:url=>{:action=>:creat}, multi_part:true) do |f|%>
 				
 				   <div class="form-group">
 	 	              <%=f.text_field(:titulo,class:"form-control",placeholder:"Titulo")%>
 	 	              <%=f.text_area(:descripcion,class:"materialize-textarea",placeholder:"Descripcion")%>
 	 	              <%=f.text_field(:autor,class:"form-control",placeholder:"Autor")%>
+	 	              <%=f.file_field(:Imag,id:"uploadBtn", class:"form-control") %>
+	 	              <input type="button" id="btnprev" class="btn btn-primary btn-sm btn-rounded"  onClick="mostrar();" value="Preview" >
+	 	            <br>
+					<div class="contenImage panel panel-default text-center">
+	 	              <img class="ImageUpload" src="" alt="" id="matrix">
+					</div>
 					  <br>
+
 	 	              <%=f.label("Fecha")%>
 	 	              <%=f.text_field(:fecha,class:"datepicker picker__input",type:"date")%>
+	 	              
 
 	               </div>
 				<br>
@@ -40,8 +90,10 @@
 				</div>
             
 			<%end%>
+			 
+	 	              
 		</div>
 		</div>
-		<div class="col-md-4"></div>
+		<div class="col-md-3"></div>
 	</div>
 </div>

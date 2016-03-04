@@ -5,6 +5,17 @@ class WelcomeController < ApplicationController
   	else
   	end
   end
+  def articulos
+    @articulos=Articulo.all
+  end
+
+  def about
+    
+  end
+
+  def contacto
+    
+  end
   def creat
   	
   end
