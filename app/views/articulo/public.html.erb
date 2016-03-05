@@ -42,17 +42,32 @@ $(document).ready(function(){
 <div class="row">
 
 		<h2 class="titleLogin1 padingall wow fadeInUp">ARTICULO-<span class="titleLogin2"><%=arti.titulo%></span></h2>
-</div>
+
 
 
 	<div class="panel panel-default">
 		<div class="panel-heading ">
-			<h10 class="textoeslogan1"><%=arti.titulo%></h10>
+			<h10 class="titleLogin1 ">Hoy hablaremos un Poco Sobre <span class="textoeslogan1"><%=arti.titulo%></span> </h10>
 		</div>
 		<div class="panel-body">
-		<span class="textListitle">Autor: </span> <%=arti.autor%><br>
-		<span class="textListitle">Descripciòn: </span><%=arti.descripcion%><br>
-		<span class="textListitle">Publicaciòn: </span><%=arti.fecha%>
+		<div class="col-md-4">
+			
+			<span class="titleLogin2">Autor: </span> <%=arti.autor%><br>
+			<span class="titleLogin2">Descripciòn: </span><%=arti.titulo%> <br>
+			<span class="titleLogin2">Publicaciòn: </span><%=arti.fecha%><br>
+			
+		</div>
+		<div class="col-md-8">
+
+		<div class="text-center"><img src="<%=arti.image%>" class="ImageUpload" alt=""></div>
+		
+		</div>
+		</div>
+		<div class="panel-body">
+		<hr style="color: blue; background-color: black; width:100%;  text-align: left;">
+		<h2 class="titleLogin1 padingall wow fadeInUp"><span class="titleLogin2"><%=arti.titulo%></span></h2>
+
+		<%=arti.descripcion%>
 		</div>
 		<div class="form-group">
 			<button id="0" type="submit" onClick="imprimir(0);" class="btn btn-primary btn-sm"><i class="material-icons">speaker_notes</i></button>
@@ -76,6 +91,6 @@ $(document).ready(function(){
 	</div>
 
 <%end%>
-
+</div>
 
 </div>
