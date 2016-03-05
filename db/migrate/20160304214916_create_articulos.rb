@@ -2,7 +2,7 @@ class CreateArticulos < ActiveRecord::Migration
   def change
     create_table :articulos do |t|
       t.string :titulo
-      t.string :descripcion
+      t.text :descripcion
       t.string :autor
       t.date :fecha
       t.string :image
