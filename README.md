@@ -2,7 +2,9 @@
 SIstema Blog para publicar articulos y comentarios
 
 # Tecnologia
-+ Ruy
++ Ruby
++ Ruby on Rails
+
 
 # WebSite
 
