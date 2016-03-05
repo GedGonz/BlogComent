@@ -1,6 +1,10 @@
 <div class="header">
 	  <div class="text-center">
-	  	<%= render 'menu' %>
+	  <%if session[:IdUsers]%>
+	  	 <%= render 'menu' %>
+	  <%else%>
+	    <%= render 'welcome/menu' %>
+	  <%end%>
 	  </div>
 </div>
 <script>
