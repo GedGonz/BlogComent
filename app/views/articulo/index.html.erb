@@ -1,20 +1,21 @@
 <div class="header"></div>
 <div class="container">
 	<div class="col-md-12 text-center">
-	 <p class="textoeslogan2 " >
-        Bienvenido <span class="titleLogin2"><%=@usuario.nombre+" "+@usuario.apellido%></span>
-        </p>
 	  <a href="/">
-		<%= image_tag "Logo2.png", :alt => "TejidoDigital", :title => "TejidoDigital",class:"wow slideInLeft tamanioImag saltos"%>
+
+		<%= image_tag "OC-Blog.png", :alt => "OC-Blog", :title => "OC-Blog",class:"wow slideInLeft tamanioImag saltos"%>
 	  </a>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
 	  <p class="textoeslogan1 padingall wow fadeIn" data-wow-delay="0.5s">
-	   Inovacion y Desarrollo en tus Manos
+	   Postea tus Articulos con Nosotros
 	   </p>
        <p class="textoeslogan2 wow bounceInDown" data-wow-delay="0.6s">
-        Somos una Empresa de Solucion a sus Necesidades
-        </p>
-		      
+        Comparte, Convive y haste parte de OC-BLOG
+       </p>
+      <%= render 'menu' %>
 
-	  <%= render 'menu' %>
 	</div>
 </div>

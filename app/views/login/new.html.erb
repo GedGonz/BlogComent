@@ -13,8 +13,8 @@
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
 		<div class="card-panel text-center bl-panel hoverable wow bounceInUp">
-		<h2 class="titleLogin1 padingall wow fadeInUp">NEW-<span class="titleLogin2">USER</span></h2>
-		<div class="bordertitle"></div>
+		<%= image_tag "OC-Blog.png", :alt => "OC-Blog", :title => "OC-Blog",class:"upimage"%>
+		
 		<br>
 
 			<%= form_for(:datauser,:url => {:action => :creat}, multipart: true) do |f| %>
@@ -30,8 +30,9 @@
 				<br>
 				<div class="form-group ">
 				<button class="btn btn-primary btn-lg btn-block btn-sm">
-					Aceptar <i class="material-icons">check_circle</i> 
+					 <i class="material-icons">check_circle</i> 
 				</button>
+				<a href="/" class="btn btn-danger btn-lg btn-block btn-sm"><i class="material-icons">clear</i></a>
 				</div>
 
 			<%end%>

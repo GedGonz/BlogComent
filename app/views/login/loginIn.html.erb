@@ -9,8 +9,9 @@
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
 		<div class="card-panel text-center bl-panel hoverable wow bounceInUp">
-		<h2 class="titleLogin1 padingall wow fadeInUp">TEJIDO-<span class="titleLogin2">DIGITAL</span></h2>
-		<div class="bordertitle"></div>
+		
+		<%= image_tag "OC-Blog.png", :alt => "OC-Blog", :title => "OC-Blog",class:"upimage"%>
+		<div class=""></div>
 		<br>
 
 			<%= form_for(:logins,:url => {:action => :access}, multipart: true) do |f| %>
@@ -25,7 +26,7 @@
 				<br>
 				<div class="form-group ">
 				<button class="btn btn-primary btn-lg btn-block btn-sm">
-					Aceptar <i class="material-icons">check_circle</i> 
+					 <i class="material-icons">check_circle</i> 
 				</button>
 				<br>
 				<div class="text-left">

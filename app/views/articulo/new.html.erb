@@ -75,17 +75,17 @@ $('.contenImage').hide();
 
 	 	              <%=f.label("Fecha")%>
 	 	              <%=f.text_field(:fecha,class:"datepicker picker__input",type:"date")%>
-	 	              
+	 	              <%= f.date_select :remainderDate, {:order => [:month, :day, :year],:prompt => true, :start_year => Time.now.year, :end_year => 2016} %>
 
 	               </div>
 				<br>
 				<br>
 				<div class="form-group">
 				<button class="btn btn-primary btn-sm btn-block">
-					Save 
+					<i class="material-icons">check_circle</i>
 				</button>
 				<a href="/articulo/index" class="btn btn-danger btn-sm btn-block">
-					Cancel
+					<i class="material-icons">clear</i>
 				</a>
 				</div>
             

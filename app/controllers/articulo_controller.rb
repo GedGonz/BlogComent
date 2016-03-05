@@ -134,14 +134,14 @@ class ArticuloController < ApplicationController
              @html=@html+"<div class='panel-body'>"
              @html= @html +"<div>"
              if comnt.tipo==0
-               @html=@html+"<img class='Imagcoment' src='/assets/iconcoment.png'>"
+               @html=@html+"<img class='Imagcoment' src='/assets/OC-Blog.png'>"
              else
                @html=@html+"<img class='Imagcoment' src='/assets/iconcoment3.png'>"
              end
              /ComentarioS/
 
              @html=@html+"<h10 class='textoeslogan1'>"+comnt.nombre+"</h10>"
-             @html=@html+"<button id='"+comnt.id.to_s+"' type='submit' onClick='imprimir("+comnt.id.to_s+");' class='btn btn-primary btn-sm'>"
+             @html=@html+"<button id='"+comnt.id.to_s+"' type='submit' onClick='imprimir("+comnt.id.to_s+");' class='btn-floating btn-small waves-light blue'>"
              @html=@html+"<i class='material-icons'>speaker_notes</i></button>"
              @html=@html+"</div>"
              @html=@html+"<span>"+comnt.comentario+"</span><br>"
