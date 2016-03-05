@@ -134,9 +134,9 @@ class ArticuloController < ApplicationController
              @html=@html+"<div class='panel-body'>"
              @html= @html +"<div>"
              if comnt.tipo==0
-               @html=@html+"<img class='Imagcoment' src='/assets/OC-Blog.png'>"
+               @html=@html+"<img class='Imagcoment' src='http://res.cloudinary.com/gedgonz/image/upload/v1457199166/OC-Blog_pqzh4t.png'>"
              else
-               @html=@html+"<img class='Imagcoment' src='/assets/iconcoment3.png'>"
+               @html=@html+"<img class='Imagcoment' src='http://res.cloudinary.com/gedgonz/image/upload/v1457199149/iconcoment3_ht4e4a.png'>"
              end
              /ComentarioS/
 
