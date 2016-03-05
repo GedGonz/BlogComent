@@ -48,14 +48,13 @@ class ArticuloController < ApplicationController
         @articulo.image=cloud['url']
         puts @articulo.image
         
-        /
+        
         if @articulo.save
-          FileUpload(uploaded_io,@articulo.image);
-         
-    	    redirect_to :controller=> :articulo, :action=>:index
+          /FileUpload(uploaded_io,@articulo.image);/
+          redirect_to :controller=> :articulo, :action=>:index
         else
     	    render "new"
-        end/
+        end
   	else
   		redirect_to :controller=> :login, :action=>:loginIn
   	end
@@ -129,9 +128,9 @@ class ArticuloController < ApplicationController
         else
            @valor=[]
         end
-        
+            
            if @agregado[comnt.id]!=comnt.id || @valor.length>0
-        
+              
              @html=@html+"<div class='panel-body'>"
              @html= @html +"<div>"
              if comnt.tipo==0
@@ -139,6 +138,8 @@ class ArticuloController < ApplicationController
              else
                @html=@html+"<img class='Imagcoment' src='/assets/iconcoment3.png'>"
              end
+             /ComentarioS/
+
              @html=@html+"<h10 class='textoeslogan1'>"+comnt.nombre+"</h10>"
              @html=@html+"<button id='"+comnt.id.to_s+"' type='submit' onClick='imprimir("+comnt.id.to_s+");' class='btn btn-primary btn-sm'>"
              @html=@html+"<i class='material-icons'>speaker_notes</i></button>"
@@ -150,6 +151,7 @@ class ArticuloController < ApplicationController
              @html=@html+"<div class='col-md-4'>"
              @html=@html+"<div class='panel panel-default'>"
              @html=@html+"<div class='panel-body'>"
+             /Formularios/
              @html=@html+"<form name='datacoment' accept-charset='UTF-8' action='/comentario/creat' method='post'>"
              @html=@html+"<div style='display:none'><input name='utf8' type='hidden' value='&#x2713;' /><input name='authenticity_token' type='hidden' value='drzc0zsFRwBpdz+NllsRFnU9HaM3nOqZAfUl3KpDz74=' /></div>"
              @html=@html+"<div class='form-group'>"
@@ -178,6 +180,7 @@ class ArticuloController < ApplicationController
                 @agregado[comnt.id]=comnt.id
             /  end/
                 /puts "entro en subcoment" /
+                @html=@html+"<hr  style='color: blue; background-color: black; width:75%;  text-align: left;'/>"
                 iteracion(@valor)
 
              @html=@html+"</div>"
