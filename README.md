@@ -8,5 +8,5 @@ SIstema Blog para publicar articulos y hacer comentarios
 
 # WebSite
 
-http://blogcoments.herokuapp.com
+http://blogcoment.herokuapp.com
 
